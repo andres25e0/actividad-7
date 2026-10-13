@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAF8"
+    tools:context=".RegistroActivity">
+    <!--imagen de fondo -->
+    <ImageView
+        android:id="@+id/imgFondo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/images"
+        android:contentDescription="Fondo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scaleType="centerCrop"/>
+
+    <!-- SCROLL PARA QUE EL TECLADO NO TAPE LOS CAMPOS -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- TARJETA DEL REGISTRO -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardRegistro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="12dp">
+
+                <!-- CONTENIDO -->
+                <LinearLayout
+                    android:id="@+id/LayoutContenido"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="30dp">
+
+                    <!-- TÍTULO -->
+                    <TextView
+                        android:id="@+id/tvTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="35dp"
+                        android:text="Crear cuenta"
+                        android:textColor="#E96A50"
+                        android:textSize="29sp"
+                        android:textStyle="bold" />
+
+                    <!-- NOMBRE -->
+                    <EditText
+                        android:id="@+id/etNombre"
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:background="@drawable/bg"
+                        android:hint="Nombre completo"
+                        android:inputType="textPersonName|textCapWords"
+                        android:maxLength="100"
+                        android:paddingStart="18dp"
+                        android:paddingEnd="18dp"
+                        android:textColor="#333333"
+                        android:textColorHint="#E9B4A8"
+                        android:textSize="16sp" />
+
+                    <!-- CORREO -->
+                    <EditText
+                        android:id="@+id/etCorreo"
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:layout_marginTop="18dp"
+                        android:background="@drawable/bg"
+                        android:hint="Correo"
+                        android:inputType="textEmailAddress"
+                        android:maxLength="100"
+                        android:paddingStart="18dp"
+                        android:paddingEnd="18dp"
+                        android:textColor="#333333"
+                        android:textColorHint="#E9B4A8"
+                        android:textSize="16sp" />
+
+                    <!-- TELÉFONO -->
+                    <EditText
+                        android:id="@+id/etTelefono"
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:layout_marginTop="18dp"
+                        android:background="@drawable/bg"
+                        android:hint="Teléfono"
+                        android:inputType="phone"
+                        android:maxLength="20"
+                        android:paddingStart="18dp"
+                        android:paddingEnd="18dp"
+                        android:textColor="#333333"
+                        android:textColorHint="#E9B4A8"
+                        android:textSize="16sp" />
+
+                    <!-- CONTRASEÑA -->
+                    <EditText
+                        android:id="@+id/etPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:layout_marginTop="18dp"
+                        android:background="@drawable/bg"
+                        android:hint="Contraseña"
+                        android:inputType="textPassword"
+                        android:paddingStart="18dp"
+                        android:paddingEnd="18dp"
+                        android:textColor="#333333"
+                        android:textColorHint="#E9B4A8"
+                        android:textSize="16sp" />
+
+                    <!-- BOTÓN -->
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnRegistrar"
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:layout_marginTop="32dp"
+                        android:background="@drawable/bg_button"
+                        android:text="REGISTRARSE"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvIniciarSesion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="¿Ya tienes cuenta? Inicia sesión"
+                        android:textSize="13sp"
+                        android:textColor="#1CBD27"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </FrameLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
