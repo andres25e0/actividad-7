@@ -3,9 +3,6 @@ package com.example.music_
 import java.net.HttpURLConnection
 import java.net.URL
 import java.net.URLEncoder
-
-// Carpeta "music" de XAMPP. 10.0.2.2 es tu computadora vista desde el emulador.
-// Si usas un celular físico, cambia 10.0.2.2 por la IP de tu computadora.
 const val URL_SERVIDOR = "http://10.0.2.2/music/"
 
 // Envía los campos por POST a un archivo PHP y regresa lo que responde el servidor.
